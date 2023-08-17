@@ -9,5 +9,6 @@ data class Article(
     val prix: Double,
     val url: String,
     val ahcete : Boolean,
+    val degreEnvie :Byte,
     val dateAchat: LocalDate
 )
