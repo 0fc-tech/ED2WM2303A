@@ -23,7 +23,14 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         view.findViewById<Button>(R.id.button).setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+            //Option : Sans Génération des Directions (Safe Args) :
+            //findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+            //Option Avec générations des directions :
+            findNavController().navigate(
+                LoginFragmentDirections.actionLoginFragmentToHomeFragment(
+                    User("jeanpaul@gmail.com","Jean Paul")
+                )
+            )
         }
 
     }

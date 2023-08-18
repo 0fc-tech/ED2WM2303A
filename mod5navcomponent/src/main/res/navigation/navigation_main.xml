@@ -18,5 +18,9 @@
         android:id="@+id/homeFragment"
         android:name="com.eniecole.mod5navcomponent.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <argument
+            android:name="user"
+            app:argType="com.eniecole.mod5navcomponent.User" />
+    </fragment>
 </navigation>
