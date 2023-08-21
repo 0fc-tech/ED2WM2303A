@@ -17,5 +17,9 @@
         android:id="@+id/editFragment"
         android:name="com.eniecole.tpcadox.EditFragment"
         android:label="fragment_edit"
-        tools:layout="@layout/fragment_edit" />
+        tools:layout="@layout/fragment_edit" >
+        <argument
+            android:name="article"
+            app:argType="com.eniecole.tpcadox.bo.Article" />
+    </fragment>
 </navigation>

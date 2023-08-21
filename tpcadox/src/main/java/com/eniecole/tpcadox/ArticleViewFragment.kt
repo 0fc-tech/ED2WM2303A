@@ -30,7 +30,15 @@ class ArticleViewFragment : Fragment() {
         //TODO Ajouter l'article à l'UI
         binding.article = ArticleRepository.getAll()[2]
         binding.buttonEdit.setOnClickListener {
-            findNavController().navigate(R.id.action_articleViewFragment_to_editFragment)
+            //Si l'article à l'intérieur de binding n'est pas null,
+            //Exécuter le bloc de code suivant en prenant "articleNonNull" en paramètre
+            binding.article?.let {  articleNonNull ->
+                findNavController().navigate(
+                    ArticleViewFragmentDirections.actionArticleViewFragmentToEditFragment(
+                        articleNonNull
+                    )
+                )
+            }
         }
     }
 }
