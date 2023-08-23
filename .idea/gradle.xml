@@ -12,11 +12,13 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/mod10recyclerview" />
             <option value="$PROJECT_DIR$/mod4findviewbyiddemo" />
             <option value="$PROJECT_DIR$/mod5navcomponent" />
             <option value="$PROJECT_DIR$/mod6intent" />
             <option value="$PROJECT_DIR$/mod7lifecycle" />
             <option value="$PROJECT_DIR$/mod8viewmodel" />
+            <option value="$PROJECT_DIR$/mod9room" />
             <option value="$PROJECT_DIR$/tpMoyenneDesNotes" />
             <option value="$PROJECT_DIR$/tpcadox" />
             <option value="$PROJECT_DIR$/tplaunchdice" />

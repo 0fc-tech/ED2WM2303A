@@ -2,6 +2,8 @@ package com.eniecole.tplaunchdice
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import com.eniecole.tplaunchdice.databinding.ActivityLaunchDiceBinding
@@ -12,36 +14,12 @@ class LaunchDiceActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_launch_dice)
-        //binding.textViewValueDice.text = vm.valeurDe.toString()
-        binding.buttonLaunch4.setOnClickListener {
-            vm.launchDice(4)
-            //binding.textViewValueDice.text = vm.valeurDe.toString()
-
-        }
-        binding.buttonLaunch6.setOnClickListener {
-            vm.launchDice(6)
-            //binding.textViewValueDice.text = vm.valeurDe.toString()
-
-        }
-        binding.buttonLaunch12.setOnClickListener {
-            vm.launchDice(12)
-            //binding.textViewValueDice.text = vm.valeurDe.toString()
-
-        }
-        binding.buttonLaunch16.setOnClickListener {
-            vm.launchDice(16)
-            //binding.textViewValueDice.text = vm.valeurDe.toString()
-
-        }
-        binding.buttonLaunch20.setOnClickListener {
-            vm.launchDice(20)
-            //binding.textViewValueDice.text = vm.valeurDe.toString()
-
-        }
-        binding.buttonLaunch100.setOnClickListener {
-            vm.launchDice(100)
-            //binding.textViewValueDice.text = vm.valeurDe.toString()
-
+        binding.vm = vm
+        binding.lifecycleOwner = this
+    }
+    fun onLaunch(view: View){
+        if(view is Button){
+            vm.launchDice(view.text.toString().toInt())
         }
     }
 }

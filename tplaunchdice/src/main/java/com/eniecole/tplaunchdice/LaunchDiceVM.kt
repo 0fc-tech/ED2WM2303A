@@ -1,11 +1,11 @@
 package com.eniecole.tplaunchdice
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class LaunchDiceVM : ViewModel() {
-    var valeurDe = 1
-    fun launchDice(maxValue: Int): Int {
-        valeurDe = (1..maxValue).random()
-        return valeurDe
+    var valeurDe = MutableLiveData(1)
+    fun launchDice(maxValue: Int){
+        valeurDe.value = (1..maxValue).random()
     }
 }
