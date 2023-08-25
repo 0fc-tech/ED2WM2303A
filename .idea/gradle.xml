@@ -12,6 +12,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/demomenu" />
             <option value="$PROJECT_DIR$/mod10recyclerview" />
             <option value="$PROJECT_DIR$/mod4findviewbyiddemo" />
             <option value="$PROJECT_DIR$/mod5navcomponent" />
